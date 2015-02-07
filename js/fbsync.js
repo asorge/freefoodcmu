@@ -4,7 +4,7 @@ var freeFoodStrings = [
   "complimentary"
 ];
 
-var dt(date, time) {
+function dt(date, time) {
 	var nd = new Date(date);
 	var hours = parseInt(time.substr(0, 2));
 	if (time[time.length-2] === 'P')
