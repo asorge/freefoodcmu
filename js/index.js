@@ -71,3 +71,13 @@ FB.getLoginStatus(function(response) {
         'Thanks for logging in, ' + response.name + '!';
     });
   }
+
+        $(document).ready(function() {
+
+    // page is now ready, initialize the calendar...
+
+    $('#calendar').fullCalendar({
+        // put your options and callbacks here
+    })
+
+});

@@ -63,6 +63,11 @@ html body {
     html body div#centerContent a.buttonWidth {
       position: absolute;
       max-width: 100%; }
+  html body div#calendar {
+    position: absolute;
+    width: 100%;
+    top: 10%;
+    left: 20%; }
 html ul#eventList {
   padding-top: 5%;
   width: 100%; }
