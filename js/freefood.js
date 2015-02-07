@@ -13,12 +13,12 @@ function submitEvent() {
 	var Event = Parse.Object.extend("Event");
 	var newEvent = new Event();
 
-	var eventName = $form.find(".event_name").first()[0].value;
-	var date = $form.find(".datepicker").first()[0].valueAsDate;
-	var startTime = $form.find(".starttime").first()[0].value;
-	var endTime = $form.find(".endtime").first()[0].value;
-	var location = $form.find(".location").first()[0].value;
-	var foodType = $form.find(".foodtype").first()[0].value;
+	var eventName = $"#event_name")[0].value;
+	var date = $(".datepicker").first()[0].valueAsDate;
+	var startTime = $("#starttime").first()[0].value;
+	var endTime = $("#endtime").first()[0].value;
+	var location = $("#location").first()[0].value;
+	var foodType = $("#food_type").first()[0].value;
 
 	date.setDate(date.getDate() + 1);
 
