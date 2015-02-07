@@ -87,21 +87,6 @@ $(function() {
 	}(document, 'script', 'facebook-jssdk'));
 	
 	$(".submit").on("click", function() {
-		var Event = Parse.Object.extend("Event");
-		var newEvent = new Event();
-		var eventName = $(this).siblings(".eventName")[0].value
-		console.log("Event Name");
-		console.log(eventName);
-		newEvent.save({
-			name: eventName
-		}, {
-		success: function(object) {
-			console.log("Saved event!");
-		},
-		error: function(model, error) {
-			console.log("Failed to save event");
-			console.log(model);
-			console.log(error);	
-		}});
+		submitEvent();
 	});
 });
