@@ -1,6 +1,15 @@
 $(function() {
 	Parse.initialize("d3a8mJ2cDddB8gHuHQB8QIPpXTu3oMlD1WuqszwN", "FtvJcUknJQpvVBjX2rlep1YnYSsoj88ncSp3QVQx");
 	
+	window.setWelcome = function() {
+		$("#notloggedin").attr("visible", "no");
+		$("#loggedin").attr("visible", "yes");
+
+		FB.api('/me', function(response) {
+			$("#loggedin").text("Welcome, " + response.name + "!");
+		});
+	}
+
 	window.fbAsyncInit = function() {
 		Parse.FacebookUtils.init({
 		   appId      : '498020883669593', // Facebook App ID
@@ -15,17 +24,17 @@ $(function() {
 		console.log(Parse.User.current());
 		
 		if (Parse.User.current()) {
-			$("#notloggedin").attr("visible", "no");
-			$("#loggedin").attr("visible", "yes");
+			setWelcome();
 		} else {			
 			$("#facebooklogin").on("click", function() {
 				Parse.FacebookUtils.logIn(null, {
 					success: function(user) {
-						if (!user.existed()) {
+						/*if (!user.existed()) {
 							alert("User signed up and logged in through Facebook!");
 						} else {
 							alert("User logged in through Facebook!");
-						}
+						}*/
+						setWelcome();
 					},
 					error: function(user, error) {
 						alert("User cancelled the Facebook login or did not fully authorize.");
