@@ -27,7 +27,7 @@ function submitForReview(groupName, message, posterName) {
 
 	var $discard = $form.find(".discard");
 	$discard.on("click", function() {
-		$form.fadeOut(100, function() { $form.remove(); });
+		$form.fadeOut(500, function() { $form.remove(); });
 	});
 
 }
