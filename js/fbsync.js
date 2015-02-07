@@ -4,7 +4,7 @@ var freeFoodStrings = [
   "complimentary"
 ];
 
-var dt(date, time) {
+function dt(date, time) {
 	var nd = new Date(date);
 	var hours = parseInt(time.substr(0, 2));
 	if (time[time.length-2] === 'P')
@@ -43,6 +43,10 @@ function submitEvent($form) {
 	}, {
 		success: function(object) {
 			console.log("Saved event!");
+			$form.html("<center><h3>Saved Event!</h3></center>");
+			setTimeout(function() {
+				$form.fadeOut(750, function() { $form.remove(); });
+			}, 1500);
 		},
 		error: function(model, error) {
 			console.log("Failed to save event");
