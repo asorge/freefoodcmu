@@ -1,10 +1,12 @@
 $(function() {
 	Parse.initialize("d3a8mJ2cDddB8gHuHQB8QIPpXTu3oMlD1WuqszwN", "FtvJcUknJQpvVBjX2rlep1YnYSsoj88ncSp3QVQx");
-	
+
 	window.populateEvents = function() {
 		var Event = Parse.Object.extend("Event");
 		var query = new Parse.Query(Event);
-		query.get(null, {
+		query.limit(16);
+		query.ascending("start");
+		query.find({
 			success: function(events) {
 				console.log("Got events");
 				console.log(events);
