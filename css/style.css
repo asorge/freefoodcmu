@@ -28,10 +28,19 @@ html footer {
   position: absolute;
   bottom: 0;
   width: 100%; }
-
-div#search {
-	width: 50%;
-
+  
+/* styling for search box */
+.searchbar {
+	width: 15%;
+	height: 50%;
 	float: right;
+}
+
+/* styling links in top nav bar */
+#topright ul {
+	padding-right: 15% !important;
+}
+#topright ul li a {
+	font-size: 17px !important;
 }
 /*# sourceMappingURL=style.css.map */
