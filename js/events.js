@@ -18,9 +18,10 @@ function groupByDay(events) {
 function addEventsForDay(day, events) {
   var $li = $('<li class="z-depth-2"></li>').appendTo($("#eventList"));
   var $table = $("<table></table>").appendTo($li);
-  var $thead = $("<th></th>").appendTo($table);
+  var $thead = $("<thead></thead>").appendTo($table);
   $thead.text(day);
-  var $headers = $("<tr></tr>").appendTo($table);
+  var $headers = $("<thead></thead>").appendTo($table);
+  //var $headers = $("<tr></tr>").appendTo($table);
   $headers.append($("<td>Event</td>"));
   $headers.append($("<td>Time</td>"));
   $headers.append($("<td>Location</td>"));
