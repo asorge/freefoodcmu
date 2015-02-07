@@ -13,7 +13,7 @@ function submitEvent() {
 	var Event = Parse.Object.extend("Event");
 	var newEvent = new Event();
 
-	var eventName = $"#event_name")[0].value;
+	var eventName = $("#event_name")[0].value;
 	var date = $(".datepicker").first()[0].valueAsDate;
 	var startTime = $("#starttime").first()[0].value;
 	var endTime = $("#endtime").first()[0].value;
