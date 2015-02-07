@@ -1,5 +1,30 @@
 html body {
   background: #ddd; }
+  html body nav {
+    position: absolute;
+    top: 0%;
+    height: 8%; }
+    html body nav a.title {
+      font-family: 'Enriqueta', serif;
+      font-weight: bold;
+      color: transparent;
+      background: url("plaid.png");
+      -webkit-background-clip: text;
+      font-size: 3vw;
+      padding-left: 1%;
+      -webkit-text-stroke: 1px #fff; }
+    html body nav ul#nav-mobile {
+      display: inline-block;
+      position: absolute;
+      right: 1%;
+      font-size: 1vw;
+      height: 8%; }
+  html body div#centerContent {
+    position: absolute;
+    top: 30%; }
+    html body div#centerContent a.buttonWidth {
+      position: absolute;
+      max-width: 100%; }
 html footer {
   position: absolute;
   bottom: 0;
