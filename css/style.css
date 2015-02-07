@@ -2,8 +2,7 @@ html body {
   background: #ddd; }
   html body nav {
     position: absolute;
-    top: 0%;
-    height: 8%; }
+    top: 0%; }
     html body nav a.title {
       font-family: 'Enriqueta', serif;
       font-weight: bold;
