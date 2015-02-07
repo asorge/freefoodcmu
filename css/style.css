@@ -1,3 +1,8 @@
-
+html body {
+  background: #ddd; }
+html footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
 
 /*# sourceMappingURL=style.css.map */
