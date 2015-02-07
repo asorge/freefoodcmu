@@ -2,8 +2,13 @@ function logAllPosts(posts) {
 	console.log(posts);
 }
 
+function filterPosts(groupName, posts) {
+	$.each(posts, function(index, post) {
+		//considerPost
+	});
+}
+
 function searchGroups(groups) {
-	var posts = [];
 	var idx = 0;
 
 	function processOneGroup() {
@@ -14,9 +19,11 @@ function searchGroups(groups) {
 			var id = group.id;
 			FB.api(id + "/feed", function(response) {
 				console.log("Searching " + group.name + "(" + response.data.length + " posts)");
-				posts.push({group: group, posts: response.data})
 				idx += 1;
-				setTimeout(processOneGroup, 100);
+				setTimeout(processOneGroup, 20);
+				setTimeout(function() {
+					filterPosts(group.name, response.data)
+				}, 0);
 			});
 		}
 	}
