@@ -44,35 +44,36 @@
 
   <br>
   <div class = "col s6 offset-s3 center-align eventform">
+  <br>
    <a id="sync" class="waves-effect waves-light btn-large blue darken-3 buttonWidth z-depth-3">Sync Now</a>
    <p id="currentGroup">test</p>
    </div>
-   
+
    <!-- Start of an event form -->
      <div class = "col s6 offset-s3 center-align eventform">
 
         <div class="row">
           <div class="input-field col s6">
-            <input id="event_name" type="text" class="validate">
+            <input class="event_name" type="text" class="validate">
             <label for="event_name">Event Name</label>
           </div>
           <div class="input-field col s6">
-            <input id="organization" type="text" class="validate">
+            <input class="organization" type="text" class="validate">
             <label for="organization">Organization</label>
           </div>
         </div>
-        
+
         <div class="row">
           <div class="input-field col s6">
-            <input id="location" type="text" class="validate">
+            <input class="location" type="text" class="validate">
             <label for="location">Location</label>
           </div>
           <div class="input-field col s6">
-            <input id="food_type" type="text" class="validate">
+            <input class="food_type" type="text" class="validate">
             <label for="food_type">Food Type</label>
           </div>
         </div>
-        
+
         <div class="row">
           <div class="input-field col s4">
             <input type="date" class="datepicker">
@@ -193,7 +194,174 @@
             <label>Comments</label>
         </div>
       </div>
-      
+
+      <div class="row">
+          <div class="input-field col s6">
+            <input class="source" type="text" class="validate">
+            <label for="source">Source</label>
+          </div>
+      </div>
+
+		<br>
+        <br>
+
+        <button class="btn waves-effect waves-light red darken-3" type="reset" class="discard">Discard
+        	<i class="mdi-content-clear right"></i>
+        </button>
+
+        <button class="btn waves-effect waves-light red darken-3" type="submit" class="submit">Submit
+            <i class="mdi-content-send right"></i>
+        </button>
+      </form>
+
+	<!-- End of an event form -->
+</div>
+<!-- Start of an event form -->
+     <div class = "col s6 offset-s3 center-align eventform">
+
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="event_name" type="text" class="validate">
+            <label for="event_name">Event Name</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="organization" type="text" class="validate">
+            <label for="organization">Organization</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="location" type="text" class="validate">
+            <label for="location">Location</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="food_type" type="text" class="validate">
+            <label for="food_type">Food Type</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s4">
+            <input type="date" class="datepicker">
+            <label for="date" class="active">Date</label>
+          </div>
+          <div class="input-field col s4">
+             <label>Event Start Time</label><br>
+              <select class="browser-default">
+                <option value="" disabled selected>Choose Start Time</option>
+                <option value="12:00 AM">12:00 AM</option>
+                <option value="12:30 AM">12:30 AM</option>
+                <option value="01:00 AM">01:00 AM</option>
+                <option value="01:30 AM">01:30 AM</option>
+                <option value="02:00 AM">02:00 AM</option>
+                <option value="02:30 AM">02:30 AM</option>
+                <option value="03:00 AM">03:00 AM</option>
+                <option value="03:30 AM">03:30 AM</option>
+                <option value="04:00 AM">04:00 AM</option>
+                <option value="04:30 AM">04:30 AM</option>
+                <option value="05:00 AM">05:00 AM</option>
+                <option value="05:30 AM">05:30 AM</option>
+                <option value="06:00 AM">06:00 AM</option>
+                <option value="06:30 AM">06:30 AM</option>
+                <option value="07:00 AM">07:00 AM</option>
+                <option value="07:30 AM">07:30 AM</option>
+                <option value="08:00 AM">08:00 AM</option>
+                <option value="08:30 AM">08:30 AM</option>
+                <option value="09:00 AM">09:00 AM</option>
+                <option value="09:30 AM">09:30 AM</option>
+                <option value="10:00 AM">10:00 AM</option>
+                <option value="10:30 AM">10:30 AM</option>
+				<option value="11:00 AM">11:00 AM</option>
+                <option value="11:30 AM">11:30 AM</option>
+				<option value="12:00 PM">12:00 PM</option>
+                <option value="12:30 PM">12:30 PM</option>
+                <option value="01:00 PM">01:00 PM</option>
+                <option value="01:30 PM">01:30 PM</option>
+                <option value="02:00 PM">02:00 PM</option>
+                <option value="02:30 PM">02:30 PM</option>
+                <option value="03:00 PM">03:00 PM</option>
+                <option value="03:30 PM">03:30 PM</option>
+                <option value="04:00 PM">04:00 PM</option>
+                <option value="04:30 PM">04:30 PM</option>
+                <option value="05:00 PM">05:00 PM</option>
+                <option value="05:30 PM">05:30 PM</option>
+                <option value="06:00 PM">06:00 PM</option>
+                <option value="06:30 PM">06:30 PM</option>
+                <option value="07:00 PM">07:00 PM</option>
+                <option value="07:30 PM">07:30 PM</option>
+                <option value="08:00 PM">08:00 PM</option>
+                <option value="08:30 PM">08:30 PM</option>
+                <option value="09:00 PM">09:00 PM</option>
+                <option value="09:30 PM">09:30 PM</option>
+                <option value="10:00 PM">10:00 PM</option>
+                <option value="10:30 PM">10:30 PM</option>
+				<option value="11:00 PM">11:00 PM</option>
+                <option value="11:30 PM">11:30 PM</option>
+              </select>
+          </div>
+          <div class="input-field col s4">
+            <label>Event End Time</label><br>
+              <select class = "browser-default">
+                <option value="" disabled selected>Choose End Time</option>
+                <option value="12:00 AM">12:00 AM</option>
+                <option value="12:30 AM">12:30 AM</option>
+                <option value="01:00 AM">01:00 AM</option>
+                <option value="01:30 AM">01:30 AM</option>
+                <option value="02:00 AM">02:00 AM</option>
+                <option value="02:30 AM">02:30 AM</option>
+                <option value="03:00 AM">03:00 AM</option>
+                <option value="03:30 AM">03:30 AM</option>
+                <option value="04:00 AM">04:00 AM</option>
+                <option value="04:30 AM">04:30 AM</option>
+                <option value="05:00 AM">05:00 AM</option>
+                <option value="05:30 AM">05:30 AM</option>
+                <option value="06:00 AM">06:00 AM</option>
+                <option value="06:30 AM">06:30 AM</option>
+                <option value="07:00 AM">07:00 AM</option>
+                <option value="07:30 AM">07:30 AM</option>
+                <option value="08:00 AM">08:00 AM</option>
+                <option value="08:30 AM">08:30 AM</option>
+                <option value="09:00 AM">09:00 AM</option>
+                <option value="09:30 AM">09:30 AM</option>
+                <option value="10:00 AM">10:00 AM</option>
+                <option value="10:30 AM">10:30 AM</option>
+				<option value="11:00 AM">11:00 AM</option>
+                <option value="11:30 AM">11:30 AM</option>
+				<option value="12:00 PM">12:00 PM</option>
+                <option value="12:30 PM">12:30 PM</option>
+                <option value="01:00 PM">01:00 PM</option>
+                <option value="01:30 PM">01:30 PM</option>
+                <option value="02:00 PM">02:00 PM</option>
+                <option value="02:30 PM">02:30 PM</option>
+                <option value="03:00 PM">03:00 PM</option>
+                <option value="03:30 PM">03:30 PM</option>
+                <option value="04:00 PM">04:00 PM</option>
+                <option value="04:30 PM">04:30 PM</option>
+                <option value="05:00 PM">05:00 PM</option>
+                <option value="05:30 PM">05:30 PM</option>
+                <option value="06:00 PM">06:00 PM</option>
+                <option value="06:30 PM">06:30 PM</option>
+                <option value="07:00 PM">07:00 PM</option>
+                <option value="07:30 PM">07:30 PM</option>
+                <option value="08:00 PM">08:00 PM</option>
+                <option value="08:30 PM">08:30 PM</option>
+                <option value="09:00 PM">09:00 PM</option>
+                <option value="09:30 PM">09:30 PM</option>
+                <option value="10:00 PM">10:00 PM</option>
+                <option value="10:30 PM">10:30 PM</option>
+				<option value="11:00 PM">11:00 PM</option>
+                <option value="11:30 PM">11:30 PM</option>
+              </select>
+          </div>
+        </div>
+        <div class="row">
+        <div class="input-field col s12">
+            <textarea class="materialize-textarea"></textarea>
+            <label>Comments</label>
+        </div>
+      </div>
+
       <div class="row">
           <div class="input-field col s6">
             <input id="source" type="text" class="validate">
@@ -203,30 +371,23 @@
 
 		<br>
         <br>
-          
-        <button class="btn waves-effect waves-light red darken-3" type="reset" name="action">Discard
+
+        <button class="btn waves-effect waves-light red darken-3" type="reset" class="action">Discard
         	<i class="mdi-content-clear right"></i>
-        </button> 
-        
-        <button class="btn waves-effect waves-light red darken-3" type="submit" name="action">Submit
+        </button>
+
+        <button class="btn waves-effect waves-light red darken-3" type="submit" class="action">Submit
             <i class="mdi-content-send right"></i>
         </button>
       </form>
-     
+
  </div>
 </div>
 	<!-- End of an event form -->
 
-<div id ="pictures">
-
-  <ul class = "left side-nav">
-   <li id ="pizza"><img src="css/pizza.svg"></li>
-   <li id ="soda"><img src="css/soda.svg"></li>
-   <li id="burrito"><img src="css/burrito.svg"</li>
-   <li id="cookie"><img src="css/cookie.svg"</li>
- </ul>
-
+ </div>
 </div>
+
 </body>
 
 

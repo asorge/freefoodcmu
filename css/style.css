@@ -3,6 +3,8 @@ html body {
   html body select {
     background: #ddd;
     border: none; }
+  html body div#loggedin {
+    font-size: 2vw; }
   html body .title {
     font-family: 'Enriqueta', serif;
     font-weight: bold;
@@ -108,7 +110,7 @@ html ul#eventList {
     margin-top: 4%;
     padding: 1%; }
 html footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   z-index: -10;
