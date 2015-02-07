@@ -11,7 +11,7 @@ function submitForReview(groupName, message, posterName) {
 	console.log("---");
 
 	var $form = $("#eventTemplate").clone();
-	form.attr("visible", "yes");
+	$form.attr("visible", "yes");
 	$("#eventForms").append($form);
 	$form.child("#source").attr("value", message);
 }
