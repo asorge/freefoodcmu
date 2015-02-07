@@ -78,7 +78,7 @@ html footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  z-index: -10; }
+  right: 0; }
   html footer a {
     color: #eee;
     cursor: pointer; }
