@@ -16,7 +16,7 @@ function submitForReview(groupName, message, posterName) {
 	
 	var sourceMessage = posterName + " poster in " + groupName + ": \n" + message;
 	var $source = $form.find(".source");
-	$source.attr("value", sourceMessage);
+	$source.text(sourceMessage);
 	var sourceLabel = $form.find('label[for="source"]').addClass("active");
 }
 
