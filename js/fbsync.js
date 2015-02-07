@@ -43,6 +43,10 @@ function submitEvent($form) {
 	}, {
 		success: function(object) {
 			console.log("Saved event!");
+			$form.innerHTML("<center><h3>Saved Event!</h3></center>");
+			setTimeout(function() {
+				$form.fadeOut(750, function() { $form.remove(); });
+			}, 1500);
 		},
 		error: function(model, error) {
 			console.log("Failed to save event");
