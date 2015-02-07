@@ -30,8 +30,8 @@ function addEventsForDay(day, events) {
     var start = event.get("start").toLocaleTimeString();
     var finish = event.get("finish").toLocaleTimeString();
 
-    start = start.substr(0, start.length-3); // remove seconds
-    finish = finish.substr(0, finish.length-3);
+    start = start.substr(0, start.length-6) + start.substr(start.length-3, 3); // remove seconds
+    finish = finish.substr(0, finish.length-6) + finish.substr(finish.length-3, 3);
 
     var $row = $("<tr></tr>").appendTo($table);
     var $name = $("<td></td>").appendTo($row);
