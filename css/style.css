@@ -7,7 +7,7 @@ html body {
       font-family: 'Enriqueta', serif;
       font-weight: bold;
       color: transparent;
-      background: url("plaid.png");
+      
       -webkit-background-clip: text;
       font-size: 3vw;
       padding-left: 1%;
