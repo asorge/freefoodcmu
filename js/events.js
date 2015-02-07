@@ -16,11 +16,11 @@ function groupByDay(events) {
 }
 
 function addEventsForDay(day, events) {
-  var $li = $("#eventList").append($('<li class="z-depth-2"></li>'));
-  var $table = $li.append($("<table></table>"));
-  var $thead = $table.append($("<th></th>"));
+  var $li = $('<li class="z-depth-2"></li>').appendTo($("#eventList"));
+  var $table = $("<table></table>").appendTo($li);
+  var $thead = $("<th></th>").appendTo($table);
   $thead.text(day);
-  var $headers = $table.append($("<tr></tr>"));
+  var $headers = $("<tr></tr>").appendTo($table);
   $headers.append($("<td>Event</td>"));
   $headers.append($("<td>Time</td>"));
   $headers.append($("<td>Location</td>"));
@@ -30,11 +30,11 @@ function addEventsForDay(day, events) {
     var start = event.get("start").toLocaleTimeString();
     var finish = event.get("finish").toLocaleTimeString();
 
-    var $row = $table.append($("<tr></tr>"));
-    var $name = $row.append($("<td></td>"));
-    var $time = $row.append($("<td></td>"));
-    var $location = $row.append($("<td></td>"));
-    var $food = $row.append($("<td></td>"));
+    var $row = $("<tr></tr>").appendTo($table);
+    var $name = $("<td></td>").appendTo($row);
+    var $time = $("<td></td>").appendTo($row);
+    var $location = $("<td></td>").appendTo($row);
+    var $food = $("<td></td>").appendTo($row);
     $name.text(event.get("name"));
     $time.text(start + " - " + finish);
     $location.text(event.get("locationName"));
