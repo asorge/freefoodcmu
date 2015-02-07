@@ -10,7 +10,8 @@ function searchGroups(groups) {
 		if (idx == groups.length) {
 			logAllPosts(posts);
 		} else {
-			var id = groups[idx].id;
+			var group = groups[idx];
+			var id = group.id;
 			FB.api(id + "/feed", function(response) {
 				console.log("Searching " + group.name + "(" + response.data.length + " posts)");
 				posts.push({group: group, posts: response.data})
