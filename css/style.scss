@@ -34,13 +34,13 @@ html {
 
 			p#textOne {
 				font-family: 'Enriqueta', serif;
-				font-size: 2vw;
+				font-size: 3vw;
 				color: #aaa;
 				-webkit-text-stroke: 1px #000;
 				position: relative;
-				max-width: 40%;
+				max-width: 50%;
 				text-align: center;
-				left: 55%;
+				left: 50%;
 
 
 			}
@@ -48,18 +48,18 @@ html {
 			p#textTwo {
 				font-family: 'Enriqueta', serif;
 				-webkit-text-stroke: 1px #000;
-				font-size: 2vw;
+				font-size: 3vw;
 				position: relative;
-				max-width: 40%;
+				max-width: 50%;
 				text-align: center;
-				left: 55%;
+				left: 50%;
 			}
 
 		nav {
 
 			position: absolute;
 			top: 0%;
-			max-height: 15%;
+			max-height: 10%;
 
 			ul#nav-mobile {
 				display: inline-block;
@@ -131,6 +131,7 @@ html {
 		
 
 		div#pictures {
+
 	
 			ul {
 				
@@ -171,7 +172,7 @@ html {
 
 		div#centerContent {
 			position: absolute;
-			top: 30%;
+			top: 15%;
 		
 
 			
@@ -208,7 +209,7 @@ div#calendar {
 		}
 
 	footer {
-		position: absolute;
+		position: fixed;
 		bottom: 0;
 		width: 100%;
 		z-index: -10;

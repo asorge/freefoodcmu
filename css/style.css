@@ -20,25 +20,25 @@ html body {
     margin: 0; }
   html body p#textOne {
     font-family: 'Enriqueta', serif;
-    font-size: 2vw;
+    font-size: 3vw;
     color: #aaa;
     -webkit-text-stroke: 1px #000;
     position: relative;
-    max-width: 40%;
+    max-width: 50%;
     text-align: center;
-    left: 55%; }
+    left: 50%; }
   html body p#textTwo {
     font-family: 'Enriqueta', serif;
     -webkit-text-stroke: 1px #000;
-    font-size: 2vw;
+    font-size: 3vw;
     position: relative;
-    max-width: 40%;
+    max-width: 50%;
     text-align: center;
-    left: 55%; }
+    left: 50%; }
   html body nav {
     position: absolute;
     top: 0%;
-    max-height: 15%; }
+    max-height: 10%; }
     html body nav ul#nav-mobile {
       display: inline-block;
       position: absolute;
@@ -92,7 +92,7 @@ html body {
       left: 24%; }
   html body div#centerContent {
     position: absolute;
-    top: 30%; }
+    top: 15%; }
     html body div#centerContent a.buttonWidth {
       position: absolute;
       max-width: 100%; }
@@ -110,7 +110,7 @@ html ul#eventList {
     margin-top: 4%;
     padding: 1%; }
 html footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   z-index: -10;
