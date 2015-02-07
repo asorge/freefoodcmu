@@ -11,7 +11,7 @@ $(function() {
 		   version    : 'v2.2'
 		});
 		
-		$("#fblogin").on("click", function() {
+		$("#facebooklogin").on("click", function() {
 			Parse.FacebookUtils.logIn(null, {
 			  success: function(user) {
 				if (!user.existed()) {
