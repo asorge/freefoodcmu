@@ -14,6 +14,11 @@ $(function() {
 		console.log("Current:");
 		console.log(Parse.User.current());
 		
+		if (Parse.User.current()) {
+			// User is logged in
+				
+		}
+		
 		$("#facebooklogin").on("click", function() {
 			Parse.FacebookUtils.logIn(null, {
 			  success: function(user) {

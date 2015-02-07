@@ -18,9 +18,6 @@ html {
 				font-size: 3vw;
 				padding-left: 1%;
 				-webkit-text-stroke: 1px #fff;
-
-				
-			      
 			 
 			     
 			}
@@ -29,12 +26,83 @@ html {
 			ul#nav-mobile {
 				display: inline-block;
 				position: absolute;
+				width: 100%;
 				right: 1%;
 				font-size: 1vw;
-				height: 8%;
+				
+
+				li#search {
+					position:absolute;
+					right: 0;
+					width: 10%;
+					padding-top: -5%;
+
+					i {
+						position: absolute;
+						margin-top: -15px;
+					}
+
+				
+
+				}
+
+				li#ad{
+					position: absolute;
+					right: 10%;
+					width: 4%;
+				}
+
+				li#cal {
+					position: absolute;
+					right: 15%;
+					width: 5%;
+				}
+
+				li#events {
+					position: absolute;
+					right: 20%;
+					width: 5%;
+				}
+			
 
 
 
+			}
+			
+		}
+		div#pictures {
+	
+			ul {
+				
+				display: inline;
+
+				li {
+					position: absolute;
+					width: 12%;
+					height: 20%;
+					
+
+				}
+				li#pizza {
+					position: absolute;
+					left: 0;
+					bottom:1;
+				}
+
+				li#soda {
+					bottom: 0;
+					left: 7%;
+				}
+
+				li#burrito {
+					bottom: 1%;
+					left:15%;
+				}
+
+				li#cookie {
+					bottom: 0;
+					left: 24%;
+				}
 			}
 			
 		}
@@ -51,11 +119,38 @@ html {
 
 			}
 		}
+
+div#calendar {
+	position: absolute;
+	width: 100%;
+	top: 10%;
+	left: 20%;
+}
+
+
+
 	}
+
+	ul#eventList {
+
+		padding-top: 5%;
+		width: 100%;
+
+			li {
+				margin-top:4%;
+				padding: 1%;
+			}
+		}
 
 	footer {
 		position: absolute;
 		bottom: 0;
 		width: 100%;
+		z-index: -10;
+
+		a {
+			color: #eee;
+			cursor:pointer;
+		}
 	}
 }
