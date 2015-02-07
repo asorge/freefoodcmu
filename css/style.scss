@@ -1,6 +1,56 @@
 html {
 	body {
 		background: #ddd;
+
+		nav {
+
+			position: absolute;
+			top: 0%;
+			
+			
+
+			a.title {
+				font-family: 'Enriqueta', serif;
+				font-weight: bold;
+				color: transparent;
+				background: url('plaid.png');
+				-webkit-background-clip: text;
+				font-size: 3vw;
+				padding-left: 1%;
+				-webkit-text-stroke: 1px #fff;
+
+				
+			      
+			 
+			     
+			}
+
+
+			ul#nav-mobile {
+				display: inline-block;
+				position: absolute;
+				right: 1%;
+				font-size: 1vw;
+				height: 8%;
+
+
+
+			}
+			
+		}
+
+		div#centerContent {
+			position: absolute;
+			top: 30%;
+		
+
+			
+			a.buttonWidth {
+				position: absolute;
+				max-width: 100%;
+
+			}
+		}
 	}
 
 	footer {
