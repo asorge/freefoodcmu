@@ -1,5 +1,8 @@
 html body {
   background: #ddd; }
+  html body select {
+    background: #ddd;
+    border: none; }
   html body .title {
     font-family: 'Enriqueta', serif;
     font-weight: bold;
