@@ -63,6 +63,12 @@ html body {
     html body div#centerContent a.buttonWidth {
       position: absolute;
       max-width: 100%; }
+html ul#eventList {
+  padding-top: 5%;
+  width: 100%; }
+  html ul#eventList li {
+    margin-top: 4%;
+    padding: 1%; }
 html footer {
   position: absolute;
   bottom: 0;
