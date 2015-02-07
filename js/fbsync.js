@@ -13,7 +13,7 @@ function submitForReview(groupName, message, posterName) {
 	var $form = $("#eventTemplate").clone();
 	$form.attr("visible", "yes");
 	$("#eventForms").append($form);
-	$form.child("#source").attr("value", message);
+	$form.find("#source").attr("value", message);
 }
 
 function considerPost(groupName, message, posterName) {
