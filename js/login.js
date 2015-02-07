@@ -1,5 +1,5 @@
 $(function() {
-    Parse.initialize("d3a8mJ2cDddB8gHuHQB8QIPpXTu3oMlD1WuqszwN", "FtvJcUknJQpvVBjX2rlep1YnYSsoj88ncSp3QVQx");
+	Parse.initialize("d3a8mJ2cDddB8gHuHQB8QIPpXTu3oMlD1WuqszwN", "FtvJcUknJQpvVBjX2rlep1YnYSsoj88ncSp3QVQx");
 	
 	window.fbAsyncInit = function() {
 		Parse.FacebookUtils.init({
@@ -15,25 +15,24 @@ $(function() {
 		console.log(Parse.User.current());
 		
 		if (Parse.User.current()) {
-			// User is logged in
-				
-		}
-		
-		$("#facebooklogin").on("click", function() {
-			Parse.FacebookUtils.logIn(null, {
-			  success: function(user) {
-				if (!user.existed()) {
-				  alert("User signed up and logged in through Facebook!");
-				} else {
-				  alert("User logged in through Facebook!");
-				}
-			  },
-			  error: function(user, error) {
-				alert("User cancelled the Facebook login or did not fully authorize.");
-			  }
+			$("#notloggedin").attr("visible", "no");
+			$("#loggedin").attr("visible", "yes");
+		} else {			
+			$("#facebooklogin").on("click", function() {
+				Parse.FacebookUtils.logIn(null, {
+					success: function(user) {
+						if (!user.existed()) {
+							alert("User signed up and logged in through Facebook!");
+						} else {
+							alert("User logged in through Facebook!");
+						}
+					},
+					error: function(user, error) {
+						alert("User cancelled the Facebook login or did not fully authorize.");
+					}
+				});
 			});
-		});
-		
+		}
 		
 	};
 	
@@ -54,13 +53,13 @@ $(function() {
 		newEvent.save({
 			name: eventName
 		}, {
-		success: function(object) {
-			console.log("Saved event!");
-		},
-		error: function(model, error) {
-			console.log("Failed to save event");
-			console.log(model);
-			console.log(error);	
-		}});
+			success: function(object) {
+				console.log("Saved event!");
+			},
+			error: function(model, error) {
+				console.log("Failed to save event");
+				console.log(model);
+				console.log(error);	
+			}});
 	});
 });
