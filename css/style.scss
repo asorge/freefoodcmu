@@ -50,9 +50,9 @@ html {
 				-webkit-text-stroke: 1px #000;
 				font-size: 3vw;
 				position: relative;
-				max-width: 50%;
+				max-width: 55%;
 				text-align: center;
-				left: 50%;
+				left: 45%;
 			}
 
 		nav {
@@ -122,7 +122,7 @@ html {
 			a#facebooklogin {
 				position: absolute;
 				max-width: 100%;
-				right: 16%;
+				right: 17%;
 			}
 
 
@@ -136,6 +136,9 @@ html {
 			ul {
 				
 				display: inline;
+				position: fixed;
+				width: 100%;
+				bottom: 20%;
 
 				li {
 					position: absolute;
@@ -172,7 +175,9 @@ html {
 
 		div#centerContent {
 			position: absolute;
-			top: 5%;
+			top: 0%;
+			width: 100%;
+			left: -5%;
 
 		
 

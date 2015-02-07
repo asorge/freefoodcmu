@@ -32,9 +32,9 @@ html body {
     -webkit-text-stroke: 1px #000;
     font-size: 3vw;
     position: relative;
-    max-width: 50%;
+    max-width: 55%;
     text-align: center;
-    left: 50%; }
+    left: 45%; }
   html body nav {
     position: absolute;
     top: 0%;
@@ -70,9 +70,12 @@ html body {
   html body div#facebook a#facebooklogin {
     position: absolute;
     max-width: 100%;
-    right: 16%; }
+    right: 17%; }
   html body div#pictures ul {
-    display: inline; }
+    display: inline;
+    position: fixed;
+    width: 100%;
+    bottom: 20%; }
     html body div#pictures ul li {
       position: absolute;
       width: 12%;
@@ -92,7 +95,9 @@ html body {
       left: 24%; }
   html body div#centerContent {
     position: absolute;
-    top: 5%; }
+    top: 0%;
+    width: 100%;
+    left: -5%; }
     html body div#centerContent a.buttonWidth {
       position: absolute;
       max-width: 100%; }
