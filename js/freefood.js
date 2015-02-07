@@ -1,4 +1,7 @@
 $(function() {
+	$('.datepicker').pickadate();
+	$('select').material_select();
+	
     Parse.initialize("d3a8mJ2cDddB8gHuHQB8QIPpXTu3oMlD1WuqszwN", "FtvJcUknJQpvVBjX2rlep1YnYSsoj88ncSp3QVQx");
 	
 	window.fbAsyncInit = function() {

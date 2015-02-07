@@ -11,7 +11,7 @@ function groupByDay(events) {
       byDay[day] = [];
    }
    byDay[day].push(event);
-});
+  });
   return byDay;
 }
 
@@ -43,6 +43,8 @@ function addEventsForDay(day, events) {
 }
 
 function populateEvents() {
+ var calEvents = [];
+
  var Event = Parse.Object.extend("Event");
  var query = new Parse.Query(Event);
  query.limit(16);
@@ -51,6 +53,20 @@ function populateEvents() {
   success: function(events) {
    console.log("Got events");
    console.log(events);
+
+	$.each(events, function(index, value) {
+    	calEvents.push({"title": value.get("name"), "start": value.get("start").toISOString(), "end": value.get("finish").toISOString()});
+	});
+    $('#calendar').fullCalendar({
+            theme: true,
+                events: calEvents,
+                textColor: 'black',
+                color: '#fff',
+
+				});
+
+    $('#calendar').fullCalendar( 'refetchEvents' );
+
    requestFinished();
    var byDay = groupByDay(events);
    $.each(byDay, function(day, events) {
@@ -68,10 +84,7 @@ error: function(object, error) {
 $(function() {
  Parse.initialize("d3a8mJ2cDddB8gHuHQB8QIPpXTu3oMlD1WuqszwN", "FtvJcUknJQpvVBjX2rlep1YnYSsoj88ncSp3QVQx");
 
- window.populateEvents = function() {
-
- };
-
  populateEvents();
 
-});
+    });
+
