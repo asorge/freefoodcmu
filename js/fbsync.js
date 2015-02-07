@@ -33,7 +33,7 @@ function searchGroups(groups) {
 				idx += 1;
 				setTimeout(processOneGroup, 20);
 				$.each(response.data, function(index, post) {
-					considerPost(groupName, post.message, post.from.name);
+					considerPost(group.name, post.message, post.from.name);
 				});
 			});
 		}
