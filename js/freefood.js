@@ -1,3 +1,50 @@
+function dt(date, time) {
+	var nd = new Date(date);
+	var hours = parseInt(time.substr(0, 2));
+	if (time[time.length-2] === 'P')
+		hours += 12; // PM
+	minutes = parseInt(time.substr(3, 2))
+	nd.setHours(hours);
+	nd.setMinutes(minutes);
+	return nd;
+}
+
+function submitEvent() {
+	var Event = Parse.Object.extend("Event");
+	var newEvent = new Event();
+
+	var eventName = $form.find(".event_name").first()[0].value;
+	var date = $form.find(".datepicker").first()[0].valueAsDate;
+	var startTime = $form.find(".starttime").first()[0].value;
+	var endTime = $form.find(".endtime").first()[0].value;
+	var location = $form.find(".location").first()[0].value;
+	var foodType = $form.find(".foodtype").first()[0].value;
+
+	date.setDate(date.getDate() + 1);
+
+	var startDT = dt(date, startTime);
+	var endDT = dt(date, endTime);
+
+	console.log("Event Name");
+	console.log(eventName);
+	newEvent.save({
+		name: eventName,
+		start: startDT,
+		finish: endDT,
+		creator: Parse.User.current(),
+		foodDescription: foodType,
+		locationName: location
+	}, {
+		success: function(object) {
+			console.log("Saved event!");
+		},
+		error: function(model, error) {
+			console.log("Failed to save event");
+			console.log(model);
+			console.log(error);	
+		}});
+}
+
 $(function() {
 	
     Parse.initialize("d3a8mJ2cDddB8gHuHQB8QIPpXTu3oMlD1WuqszwN", "FtvJcUknJQpvVBjX2rlep1YnYSsoj88ncSp3QVQx");
@@ -39,7 +86,7 @@ $(function() {
 		fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));
 	
-	$(".newEvent .submit").on("click", function() {
+	$(".submit").on("click", function() {
 		var Event = Parse.Object.extend("Event");
 		var newEvent = new Event();
 		var eventName = $(this).siblings(".eventName")[0].value
