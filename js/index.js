@@ -2,8 +2,14 @@ $(document).ready(function() {
 
     // page is now ready, initialize the calendar...
 
-    $('#calendar').fullCalendar({
-        // put your options and callbacks here
-    })
+    /* make the API call */
+FB.api(
+    "/me/events",
+    function (response) {
+      if (response && !response.error) {
+        console.log(response.name);
+      }
+    }
+);
 
 });
