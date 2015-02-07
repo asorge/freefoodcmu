@@ -1,11 +1,23 @@
-function logAllPosts(posts) {
-	console.log(posts);
+var freeFoodStrings = [
+  "free food",
+  "refreshments",
+  "complimentary"
+];
+
+function submitForReview(groupName, message, posterName) {
+	console.log("---");
+	console.log("Message from " + posterName + " in " + groupName);
+	console.log(message);
+	console.log("---");
 }
 
-function filterPosts(groupName, posts) {
-	$.each(posts, function(index, post) {
-		//considerPost
-	});
+function considerPost(groupName, message, posterName) {
+	var lower = message.toLowerCase();
+	for (var i = 0; i < freeFoodStrings.length; i++) {
+		if (lower.indexOf(freeFoodStrings[i]) !== -1) {
+			submitForReview(groupName, message, posterName);
+		}
+	}
 }
 
 function searchGroups(groups) {
@@ -21,9 +33,9 @@ function searchGroups(groups) {
 				console.log("Searching " + group.name + "(" + response.data.length + " posts)");
 				idx += 1;
 				setTimeout(processOneGroup, 20);
-				setTimeout(function() {
-					filterPosts(group.name, response.data)
-				}, 0);
+				$.each(posts, function(index, post) {
+					considerPost(groupName, post.message, post.from.name);
+				});
 			});
 		}
 	}
