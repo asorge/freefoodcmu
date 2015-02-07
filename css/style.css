@@ -29,5 +29,12 @@ html footer {
   bottom: 0;
   width: 100%; }
 
+div#search {
+	
+	width: 50%;
+	height: 5%;
 
+	float: right;
+	padding-left: 2%;
+}
 /*# sourceMappingURL=style.css.map */
