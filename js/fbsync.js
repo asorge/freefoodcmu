@@ -25,7 +25,6 @@ function searchGroups(groups) {
 
 	function processOneGroup() {
 		if (idx == groups.length) {
-			logAllPosts(posts);
 		} else {
 			var group = groups[idx];
 			var id = group.id;
@@ -33,7 +32,7 @@ function searchGroups(groups) {
 				console.log("Searching " + group.name + "(" + response.data.length + " posts)");
 				idx += 1;
 				setTimeout(processOneGroup, 20);
-				$.each(posts, function(index, post) {
+				$.each(response.data, function(index, post) {
 					considerPost(groupName, post.message, post.from.name);
 				});
 			});
