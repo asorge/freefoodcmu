@@ -9,11 +9,11 @@ function submitEvent($form) {
 	var newEvent = new Event();
 
 	var eventName = $form.find(".event_name").first()[0].value;
-	var date = $form.find(".datepicker").value;
-	var startTime = $form.find(".starttime").value;
-	var endTime = $form.find(".endtime").value;
-	var location = $form.find(".location").value;
-	var foodType = $form.find(".foodtype").value;
+	var date = $form.find(".datepicker").first()[0]value;
+	var startTime = $form.find(".starttime").first()[0]value;
+	var endTime = $form.find(".endtime").first()[0]value;
+	var location = $form.find(".location").first()[0]value;
+	var foodType = $form.find(".foodtype").first()[0]value;
 
 	
 
