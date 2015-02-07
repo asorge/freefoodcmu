@@ -29,17 +29,18 @@ html footer {
   bottom: 0;
   width: 100%; }
   
+/* styling for search box */
 .searchbar {
-	width: 20%;
+	width: 15%;
+	height: 50%;
 	float: right;
 }
 
+/* styling links in top nav bar */
 #topright ul {
-	padding-right: 30% !important;
+	padding-right: 15% !important;
 }
-
 #topright ul li a {
-	vertical-align: text-bottom !important;
+	font-size: 17px !important;
 }
-
 /*# sourceMappingURL=style.css.map */
