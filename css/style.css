@@ -6,7 +6,7 @@ html body {
   html body div#loggedin {
     position: absolute;
     max-width: 100%;
-    float: right; }
+    text-align: center; }
   html body .title {
     font-family: 'Enriqueta', serif;
     font-weight: bold;
