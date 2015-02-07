@@ -108,7 +108,7 @@ html body {
     top: 10%;
     left: 20%;
     height: 70%;
-    z-index: 100; }
+    z-index: -100; }
 html ul#eventList {
   position: relative;
   padding-top: 5%;
