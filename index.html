@@ -96,7 +96,23 @@ FB.getLoginStatus(function(response) {
 	        <li><a href="events.html">events</a></li>
 	        <li><a href="calendar.html">calendar</a></li>
 	        <li><a href="add.html">add</a></li>
-	        <li>search</li>
+	        <li>
+            	<div id="search">
+					<script>
+                      (function() {
+                        var cx = '013095039047659864656:ogouaza4tns';
+                        var gcse = document.createElement('script');
+                        gcse.type = 'text/javascript';
+                        gcse.async = true;
+                        gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                            '//www.google.com/cse/cse.js?cx=' + cx;
+                        var s = document.getElementsByTagName('script')[0];
+                        s.parentNode.insertBefore(gcse, s);
+                      })();
+                    </script>
+                    <gcse:search></gcse:search>
+                 </div>
+           	</li>
 	        <li>&nbsp;</li>
 	      </ul>
 	    </div>
