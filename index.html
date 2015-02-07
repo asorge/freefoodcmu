@@ -87,36 +87,31 @@ FB.getLoginStatus(function(response) {
       <script type="text/javascript" src="js/bin/materialize.min.js"></script>
       <script type="text/javascript" src="js/index.js"></script>
 	
-	
+	<div class="navbar-fixed">
       <nav>
-	    <div class="nav-wrapper red darken-3 row">
+	    <div class="nav-wrapper red darken-3">
 	    <div class = "col s12">
-	      <a href="#"  class="brand-logo left title">free food @ cmu</a>
-          <div id="search">
-					<script>
-                      (function() {
-                        var cx = '013095039047659864656:ogouaza4tns';
-                        var gcse = document.createElement('script');
-                        gcse.type = 'text/javascript';
-                        gcse.async = true;
-                        gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-                            '//www.google.com/cse/cse.js?cx=' + cx;
-                        var s = document.getElementsByTagName('script')[0];
-                        s.parentNode.insertBefore(gcse, s);
-                      })();
-                    </script>
-                    <gcse:search></gcse:search>
-          </div>
+	      <a href="index.html" class="brand-logo left title">free food @ cmu</a>
 	      <ul id="nav-mobile" class="side-nav">
 	        <li><a href="events.html">events</a></li>
 	        <li><a href="calendar.html">calendar</a></li>
 	        <li><a href="add.html">add</a></li>
-	        <li>&nbsp;</li>
 	      </ul>
+          <div class="searchbar">
+                
+    
+      <form>
+        <div class="input-field">
+          <input id="search" type="text" required>
+          <label for="search"><i class="mdi-action-search"></i></label>
+        </div>
+      </form>
+    
+          </div>
 	    </div>
 	    </div>
 	  </nav>
-
+	 </div>
 
 	 <div class = "row">
 
