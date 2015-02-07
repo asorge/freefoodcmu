@@ -11,3 +11,8 @@ footer a:hover {
 #topright ul li a:hover{
 	text-decoration: none;
 }
+
+.eventform {
+	border: black 1px solid;
+	margin: 25px;
+}

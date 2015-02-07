@@ -1,6 +1,4 @@
-$(document).ready(function() {
+$(function() {
     $('select').material_select();
 	$('.datepicker').pickadate();
 });
-  
-           
