@@ -5,8 +5,8 @@ html body {
     border: none; }
   html body div#loggedin {
     position: absolute;
-    width: 100%;
-    left: 40%; }
+    max-width: 100%;
+    float: right; }
   html body .title {
     font-family: 'Enriqueta', serif;
     font-weight: bold;
