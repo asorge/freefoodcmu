@@ -18,6 +18,7 @@ function submitForReview(groupName, message, posterName) {
 	var $source = $form.find(".source");
 	$source.text(sourceMessage);
 	var sourceLabel = $form.find('label[for="source"]').addClass("active");
+	$source.height($source.scrollHeight);
 }
 
 function considerPost(groupName, message, posterName) {
