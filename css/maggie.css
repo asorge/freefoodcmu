@@ -16,6 +16,13 @@ footer a:hover {
 }
 
 /* styling links in top nav bar */
+#topright ul {
+	padding-right: 15% !important;
+}
+#topright ul li a {
+	font-size: 17px !important;
+}
 #topright ul li a:hover{
+	font-size: 17px !important;
 	text-decoration: underline;
 }
