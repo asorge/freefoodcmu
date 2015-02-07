@@ -48,38 +48,39 @@
   <div class="row">
       <form class="col s12"><br>Please enter the information for your free food event below:<br>
         <div class="row">
-          <div class="input-field col s12">
+          <div class="input-field col s6">
             <input id="event_name" type="text" class="validate">
             <label for="event_name">Event Name</label>
           </div>
-        <div class="row">
-          <div class="input-field col s12">
+          <div class="input-field col s6">
             <input id="organization" type="text" class="validate">
             <label for="organization">Organization</label>
           </div>
         </div>
+        
         <div class="row">
-          <div class="input-field col s12">
+          <div class="input-field col s6">
             <input id="location" type="text" class="validate">
             <label for="location">Location</label>
           </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="start_time" type="text" class="validate">
-            <label for="start_time">Event Start Time</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="end_time" type="text" class="validate">
-            <label for="end_time">Event End Time</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s12">
+          <div class="input-field col s6">
             <input id="food_type" type="text" class="validate">
             <label for="food_type">Food Type</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="input-field col s4">
+            <input type="date" class="datepicker">
+            <label for="date" class="active">Date</label>
+          </div>
+          <div class="input-field col s4">
+            <input id="start_time" type="time" class="validate">
+            <label for="start_time">Event Start Time</label>
+          </div>
+          <div class="input-field col s4">
+            <input id="end_time" type="time" class="validate">
+            <label for="end_time">Event End Time</label>
           </div>
         </div>
       </form>
