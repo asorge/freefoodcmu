@@ -6,7 +6,11 @@ $(function() {
 		$("#loggedin").attr("visible", "yes");
 
 		FB.api('/me', function(response) {
-			$("#loggedin").text("Welcome, " + response.name + "!");
+			if (response.name) {
+				$("#loggedin").text("Welcome, " + response.name + "!");
+		    } else {
+		    	$("#loggedin").text("Welcome!");
+		    }
 		});
 	}
 
