@@ -78,9 +78,16 @@ html footer {
   position: absolute;
   bottom: 0;
   width: 100%;
+  z-index: -10;
   right: 0; }
   html footer a {
     color: #eee;
-    cursor: pointer; }
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold; }
+  html footer div#footerText {
+    float: right;
+    background: none;
+    margin-right: 2%; }
 
 /*# sourceMappingURL=style.css.map */

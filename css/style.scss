@@ -148,12 +148,20 @@ div#calendar {
 		position: absolute;
 		bottom: 0;
 		width: 100%;
-	
+		z-index: -10;
 		right: 0;
 
 		a {
 			color: #eee;
 			cursor:pointer;
+			text-decoration: none;
+			font-weight: bold;
+		}
+
+		div#footerText {
+			float: right;
+			background: none;
+			margin-right: 2%;
 		}
 	}
 }
