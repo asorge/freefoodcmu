@@ -3,8 +3,6 @@ html body {
   html body select {
     background: #ddd;
     border: none; }
-  html body div#loggedin {
-    font-size: 2vw; }
   html body .title {
     font-family: 'Enriqueta', serif;
     font-weight: bold;
