@@ -29,10 +29,5 @@ html footer {
   bottom: 0;
   width: 100%; }
 
-div#search {
-	position: absolute;
-	display: inline-block;
-	float: right;
-	padding-left: 2%;
-}
+
 /*# sourceMappingURL=style.css.map */
