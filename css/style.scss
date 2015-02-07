@@ -29,9 +29,37 @@ html {
 			ul#nav-mobile {
 				display: inline-block;
 				position: absolute;
+				width: 100%;
 				right: 1%;
 				font-size: 1vw;
-				height: 8%;
+				
+
+				li#search {
+					position:absolute;
+					right: 0;
+					width: 10%;
+					padding-top: -5%;
+
+				}
+
+				li#ad{
+					position: absolute;
+					right: 11%;
+					width: 5%;
+				}
+
+				li#cal {
+					position: absolute;
+					right: 17%;
+					width: 5%;
+				}
+
+				li#events {
+					position: absolute;
+					right: 23%;
+					width: 5%;
+				}
+			
 
 
 

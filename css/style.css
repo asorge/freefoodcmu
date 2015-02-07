@@ -15,9 +15,26 @@ html body {
     html body nav ul#nav-mobile {
       display: inline-block;
       position: absolute;
+      width: 100%;
       right: 1%;
-      font-size: 1vw;
-      height: 8%; }
+      font-size: 1vw; }
+      html body nav ul#nav-mobile li#search {
+        position: absolute;
+        right: 0;
+        width: 10%;
+        padding-top: -5%; }
+      html body nav ul#nav-mobile li#ad {
+        position: absolute;
+        right: 11%;
+        width: 5%; }
+      html body nav ul#nav-mobile li#cal {
+        position: absolute;
+        right: 17%;
+        width: 5%; }
+      html body nav ul#nav-mobile li#events {
+        position: absolute;
+        right: 23%;
+        width: 5%; }
   html body div#pictures ul {
     display: inline; }
     html body div#pictures ul li {
