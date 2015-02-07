@@ -4,7 +4,7 @@ html body {
     background: #ddd;
     border: none; }
   html body div#loggedin {
-    text-align: center; }
+    font-size: 2vw; }
   html body .title {
     font-family: 'Enriqueta', serif;
     font-weight: bold;
