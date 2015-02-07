@@ -74,7 +74,13 @@ function submitForReview(groupName, message, posterName) {
 
 	var $discard = $form.find(".discard");
 	$discard.on("click", function() {
-		$form.fadeOut(500, function() { $form.remove(); });
+		$form.fadeOut(1000, function() { $form.remove(); });
+		var startHeight = $form.height();
+		var reduceHeight = function() {
+			$form.height($form.height() - startHeight/10);
+			setTimeout(reduceHeight, 120);
+		}
+		reduceHeight();
 	});
 
 }
