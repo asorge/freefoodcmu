@@ -5,7 +5,32 @@ var freeFoodStrings = [
 ];
 
 function submitEvent($form) {
-	console.log("submitting");
+	var Event = Parse.Object.extend("Event");
+	var newEvent = new Event();
+
+	var eventName = $form.find(".event_name").first()[0].value;
+	var date = $form.find(".datepicker").value;
+	var startTime = $form.find(".starttime").value;
+	var endTime = $form.find(".endtime").value;
+	var location = $form.find(".location").value;
+	var foodType = $form.find(".foodtype").value;
+
+	
+
+	console.log("Event Name");
+	console.log(eventName);
+	newEvent.save({
+		name: eventName
+
+	}, {
+		success: function(object) {
+			console.log("Saved event!");
+		},
+		error: function(model, error) {
+			console.log("Failed to save event");
+			console.log(model);
+			console.log(error);	
+		}});
 }
 
 function submitForReview(groupName, message, posterName) {
