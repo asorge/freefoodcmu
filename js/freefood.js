@@ -88,5 +88,6 @@ $(function() {
 	
 	$(".submit").on("click", function() {
 		submitEvent();
+		$(".reset").click();
 	});
 });
