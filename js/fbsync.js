@@ -1,4 +1,4 @@
-function(response){
+function fbresponse(response){
 	if (response.status === 'connected') {
 		console.log("connected");
 	} else if (response.status === 'not_authorized') {
