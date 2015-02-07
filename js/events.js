@@ -9,8 +9,8 @@ function groupByDay(events) {
     var day = start.toLocaleDateString();
     if (!byDay.hasOwnProperty(day)) {
       byDay[day] = [];
-   }
-   byDay[day].push(event);
+    }
+    byDay[day].push(event);
   });
   return byDay;
 }
@@ -39,7 +39,7 @@ function addEventsForDay(day, events) {
     $time.text(start + " - " + finish);
     $location.text(event.get("locationName"));
     $food.text(event.get("foodDescription"));
- });
+  });
 }
 
 function populateEvents() {
@@ -54,30 +54,32 @@ function populateEvents() {
    console.log("Got events");
    console.log(events);
 
-	$.each(events, function(index, value) {
-    	calEvents.push({"title": value.get("name"), "start": value.get("start").toISOString(), "end": value.get("finish").toISOString()});
-	});
-    $('#calendar').fullCalendar({
-            theme: true,
-                events: calEvents,
-                textColor: 'black',
-                color: '#fff',
+   if (document.getElementById("calendar")) {
+     $.each(events, function(index, value) {
+       calEvents.push({"title": value.get("name"), "start": value.get("start").toISOString(), "end": value.get("finish").toISOString()});
+     });
+     $('#calendar').fullCalendar({
+      theme: true,
+      events: calEvents,
+      textColor: 'black',
+      color: '#fff',
 
-				});
+    });
 
-    $('#calendar').fullCalendar( 'refetchEvents' );
+     $('#calendar').fullCalendar( 'refetchEvents' );
+   }
 
    requestFinished();
    var byDay = groupByDay(events);
    $.each(byDay, function(day, events) {
     addEventsForDay(day, events);
- });
-},
-error: function(object, error) {
+  });
+ },
+ error: function(object, error) {
    console.log("Did not get events");
    console.log(object);
    console.log(error);
-}
+ }
 });
 }
 
@@ -86,5 +88,5 @@ $(function() {
 
  populateEvents();
 
-    });
+});
 
