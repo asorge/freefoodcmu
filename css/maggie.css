@@ -1,0 +1,21 @@
+footer a {
+	color: inherit;
+	text-decoration: underline;
+}
+
+footer a:hover {
+	text-decoration: none;
+	color: #f5f5f5;
+}
+  
+/* styling for search box */
+.searchbar {
+	width: 15%;
+	height: 50%;
+	float: right;
+}
+
+/* styling links in top nav bar */
+#topright ul li a:hover{
+	text-decoration: underline;
+}
