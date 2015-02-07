@@ -21,7 +21,6 @@ function addEventsForDay(day, events) {
   var $thead = $("<thead></thead>").appendTo($table);
   $thead.text(day);
   var $headers = $("<thead></thead>").appendTo($table);
-  //var $headers = $("<tr></tr>").appendTo($table);
   $headers.append($("<td>Event</td>"));
   $headers.append($("<td>Time</td>"));
   $headers.append($("<td>Location</td>"));
