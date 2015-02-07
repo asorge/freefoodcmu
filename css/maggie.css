@@ -13,6 +13,8 @@ footer a:hover {
 }
 
 .eventform {
-	border: black 1px solid;
+	border: 2px solid black;
+	border-radius: 39px;
+	box-shadow: 0 0 3px 3px #b6b6b6;
 	margin: 25px;
 }
