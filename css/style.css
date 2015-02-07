@@ -75,7 +75,7 @@ html body {
     display: inline;
     position: fixed;
     width: 100%;
-    bottom: 20%; }
+    bottom: 15%; }
     html body div#pictures ul li {
       position: absolute;
       width: 12%;
@@ -95,7 +95,7 @@ html body {
       left: 24%; }
   html body div#centerContent {
     position: absolute;
-    top: 0%;
+    top: 4%;
     width: 100%;
     left: -5%; }
     html body div#centerContent a.buttonWidth {
@@ -110,7 +110,8 @@ html body {
     z-index: 100; }
 html ul#eventList {
   padding-top: 5%;
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 10%; }
   html ul#eventList li {
     margin-top: 4%;
     padding: 1%; }
