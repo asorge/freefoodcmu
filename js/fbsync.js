@@ -9,9 +9,20 @@ function submitForReview(groupName, message, posterName) {
 	console.log("Message from " + posterName + " in " + groupName);
 	console.log(message);
 	console.log("---");
+
+	var $form = $("#eventTemplate").clone();
+	$form.attr("visible", "yes");
+	$("#eventForms").append($form);
+	
+	var sourceMessage = posterName + " poster in " + groupName + ": \n" + message;
+	var $source = $form.find(".source");
+	$source.attr("value", sourceMessage);
+	var sourceLabel = $form.find('label[for="source"]').addClass("active");
 }
 
 function considerPost(groupName, message, posterName) {
+	if (!message)
+		return;
 	var lower = message.toLowerCase();
 	for (var i = 0; i < freeFoodStrings.length; i++) {
 		if (lower.indexOf(freeFoodStrings[i]) !== -1) {
@@ -25,9 +36,11 @@ function searchGroups(groups) {
 
 	function processOneGroup() {
 		if (idx == groups.length) {
+			$("#currentGroup").text("");
 		} else {
 			var group = groups[idx];
 			var id = group.id;
+			$("#currentGroup").text("Searching " + group.name);
 			FB.api(id + "/feed", function(response) {
 				console.log("Searching " + group.name + "(" + response.data.length + " posts)");
 				idx += 1;

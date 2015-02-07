@@ -2239,7 +2239,7 @@ td, th {
     .collection .collection-item:last-child {
       border-bottom: none; }
     .collection .collection-item.active {
-      background-color: #26a69a;
+      background-color: red;
       color: #eafaf9; }
   .collection a.collection-item {
     display: block;
@@ -5929,7 +5929,7 @@ label {
   .input-field input[type=number]:focus + label,
   .input-field input[type=search]:focus + label,
   .input-field textarea:focus.materialize-textarea + label {
-    color: #26a69a; }
+    color: #1565c0; }
   .input-field input[type=text].valid,
   .input-field input[type=password].valid,
   .input-field input[type=email].valid,
@@ -6029,10 +6029,10 @@ input[type=tel]:focus,
 input[type=number]:focus,
 input[type=search]:focus,
 textarea:focus.materialize-textarea {
-  border-bottom: 1px solid #26a69a;
-  -webkit-box-shadow: 0 1px 0 0 #26a69a;
-  -moz-box-shadow: 0 1px 0 0 #26a69a;
-  box-shadow: 0 1px 0 0 #26a69a; }
+  border-bottom: 1px solid #1565c0;
+  -webkit-box-shadow: 0 1px 0 0 #1565c0;
+  -moz-box-shadow: 0 1px 0 0 #1565c0;
+  box-shadow: 0 1px 0 0 #1565c0; } /*facebook blue!*/
 
 textarea.materialize-textarea {
   overflow-y: hidden;
