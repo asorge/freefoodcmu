@@ -16,7 +16,7 @@ function groupByDay(events) {
 }
 
 function addEventsForDay(day, events) {
-  var $li = $('<li class="z-depth-2"></li>');
+  var $li = $("#eventList").append($('<li class="z-depth-2"></li>'));
   var $table = $li.append($("<table></table>"));
   var $thead = $table.append($("<th></th>"));
   $thead.text(day);
