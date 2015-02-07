@@ -1,3 +1,6 @@
+
+var calEvents = [];
+
 $(function() {
 	Parse.initialize("d3a8mJ2cDddB8gHuHQB8QIPpXTu3oMlD1WuqszwN", "FtvJcUknJQpvVBjX2rlep1YnYSsoj88ncSp3QVQx");
 
@@ -10,6 +13,21 @@ $(function() {
 			success: function(events) {
 				console.log("Got events");
 				console.log(events);
+				$.each(events, function(index, value) {
+					calEvents.push({"title": value.get("name"), "start": value.get("start").toISOString(), "end": value.get("finish").toISOString()});
+				});
+
+				$('#calendar').fullCalendar({
+					theme: true,
+				    events: calEvents,
+				    textColor: 'black',
+				    color: '#fff',
+				    
+				});
+
+				$('#calendar').fullCalendar( 'refetchEvents' );
+
+				
 			},
 			error: function(object, error) {
 				console.log("Did not get events");
@@ -19,6 +37,21 @@ $(function() {
 		});
 	};
 
+
+
 	populateEvents();
+
+});
+
+
+
+
+
+
+$(document).ready(function() {
+
+    // page is now ready, initialize the calendar...
+
+    
 
 });
