@@ -34,4 +34,12 @@ html footer {
 	float: right;
 }
 
+#topright ul {
+	padding-right: 30% !important;
+}
+
+#topright ul li a {
+	vertical-align: text-bottom !important;
+}
+
 /*# sourceMappingURL=style.css.map */
