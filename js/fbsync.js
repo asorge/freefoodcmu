@@ -4,13 +4,13 @@ var freeFoodStrings = [
   "complimentary"
 ];
 
-function submitForReview(groupName, message, posterName) {
-	console.log("---");
-	console.log("Message from " + posterName + " in " + groupName);
-	console.log(message);
-	console.log("---");
+function submitEvent($form) {
+	console.log("submitting");
+}
 
-	var $form = $("#eventTemplate").clone();
+function submitForReview(groupName, message, posterName) {
+	
+	var $form = $("#eventTemplate").first().clone();
 	$form.attr("visible", "yes");
 	$("#eventForms").append($form);
 	
@@ -19,6 +19,17 @@ function submitForReview(groupName, message, posterName) {
 	$source.text(sourceMessage);
 	var sourceLabel = $form.find('label[for="source"]').addClass("active");
 	$source.height($source[0].scrollHeight);
+
+	var $submit = $form.find(".submit");
+	$submit.on("click", function() {
+		submitEvent($form);
+	});
+
+	var $discard = $form.find(".discard");
+	$discard.on("click", function() {
+		$form.fadeOut(500, function() { $form.remove(); });
+	});
+
 }
 
 function considerPost(groupName, message, posterName) {
@@ -43,7 +54,6 @@ function searchGroups(groups) {
 			var id = group.id;
 			$("#currentGroup").text("Searching " + group.name);
 			FB.api(id + "/feed", function(response) {
-				console.log("Searching " + group.name + "(" + response.data.length + " posts)");
 				idx += 1;
 				setTimeout(processOneGroup, 20);
 				$.each(response.data, function(index, post) {
