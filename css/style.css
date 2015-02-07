@@ -110,7 +110,7 @@ html ul#eventList {
     margin-top: 4%;
     padding: 1%; }
 html footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   z-index: -10;
