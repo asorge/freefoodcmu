@@ -1,14 +1,4 @@
-  <html>
-    <head>
-      <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
-      <link type="text/css" rel="stylesheet" href="css/style.css"/>
-      <link href='http://fonts.googleapis.com/css?family=Enriqueta:400,700' rel='stylesheet' type='text/css'>
-    </head>
-
-    <body>
-        <script>
-  window.fbAsyncInit = function() {
+window.fbAsyncInit = function() {
     FB.init({
       appId      : '498020883669593',
       xfbml      : true,
@@ -81,70 +71,3 @@ FB.getLoginStatus(function(response) {
         'Thanks for logging in, ' + response.name + '!';
     });
   }
-</script>
-      <!--Import jQuery before materialize.js-->
-      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <script type="text/javascript" src="js/bin/materialize.min.js"></script>
-      <script type="text/javascript" src="js/index.js"></script>
-	
-	
-      <nav>
-	    <div class="nav-wrapper red darken-3 row">
-	    <div class = "col s12">
-	      <a href="#"  class="brand-logo left title">free food @ cmu</a>
-	      <ul id="nav-mobile" class="side-nav">
-	        <li><a href="events.html">events</a></li>
-	        <li><a href="calendar.html">calendar</a></li>
-	        <li><a href="add.html">add</a></li>
-	        <li>search</li>
-	        <li>&nbsp;</li>
-	      </ul>
-	    </div>
-	    </div>
-	  </nav>
-
-
-	 <div class = "row">
-
-			<div class = "container" id ="centerContent">
-				<div class = "row">
-					<div class = "col s2 offset-s8">
-						<center>LOGIN WITH FB WOW</center>
-						  <div
-							class="fb-like"
-							data-share="true"
-							data-width="450"
-							data-show-faces="true">
-							</div>
-							<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-</fb:login-button>
-
-<div id="status">
-</div>
-					</div>
-				</div>
-				<div class = "row">
-					<div class = "col s2 offset-s8">
-						<a class="waves-effect waves-light btn-large red darken-2 buttonWidth">BROWSE EVENTS</a>
-					</div>
-				</div>
-
-		</div>
-	 </div>
-	 
-	 
-
-    </body>
-
-
-    <footer class="page-footer red darken-3">
-      <div class="footer-copyright">
-        <div class="container">
-         free food @ cmu: A <a href="http://tartanhacks.com/">TartanHacks 2015</a> project by Ally Sorge, Chris Barker, and Maggie Yu.
-        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-
-        </div>
-      </div>
-    </footer>
-
-  </html>
