@@ -11,6 +11,9 @@ $(function() {
 		   version    : 'v2.2'
 		});
 		
+		console.log("Current:");
+		console.log(Parse.User.current());
+		
 		$("#facebooklogin").on("click", function() {
 			Parse.FacebookUtils.logIn(null, {
 			  success: function(user) {
