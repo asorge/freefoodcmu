@@ -4,7 +4,6 @@
       <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
       <link type="text/css" rel="stylesheet" href="css/style.css"/>
       <link type="text/css" rel="stylesheet" href="css/maggie.css"/>
-      <link type="text/css" rel='stylesheet' href='md-date-time-0.0.5/dist/md-date-time.css'>
       <link href='http://fonts.googleapis.com/css?family=Enriqueta:400,700' rel='stylesheet' type='text/css'>
     </head>
 
@@ -15,7 +14,6 @@
       <script type="text/javascript" src="js/index.js"></script>
       <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.3.4.min.js"></script>
       <script type="text/javascript" src="js/freefood.js"></script>
-      <script type="text/javascript" src='md-date-time-0.0.5/dist/md-date-time.js'></script>
 
 	<div class="navbar-fixed">
       <nav>
@@ -72,13 +70,44 @@
         </div>
         
         <div class="row">
-          <div class="input-field col s4">
+          <div class="input-field col s2">
             <input type="date" class="datepicker">
             <label for="date" class="active">Date</label>
           </div>
+        </div>
+        
+        <div class="row">
           <div class="input-field col s4">
-            <input id="start_time" type="time" class="validate">
-            <label for="start_time">Event Start Time</label>
+             <label>Event Start Time</label><br>
+              <select>
+                <option value="" disabled selected>Choose Start Time</option>
+                <option value="12:00 AM">12:00 AM</option>
+                <option value="12:30 AM">12:30 AM</option>
+                <option value="01:00 AM">01:00 AM</option>
+                <option value="01:30 AM">01:30 AM</option>
+                <option value="02:00 AM">02:00 AM</option>
+                <option value="02:30 AM">02:30 AM</option>
+                <option value="03:00 AM">03:00 AM</option>
+                <option value="03:30 AM">03:30 AM</option>
+                <option value="04:00 AM">04:00 AM</option>
+                <option value="04:30 AM">04:30 AM</option>
+                <option value="05:00 AM">05:00 AM</option>
+                <option value="05:30 AM">05:30 AM</option>
+                <option value="06:00 AM">06:00 AM</option>
+                <option value="06:30 AM">06:30 AM</option>
+                <option value="07:00 AM">07:00 AM</option>
+                <option value="07:30 AM">07:30 AM</option>
+                <option value="08:00 AM">08:00 AM</option>
+                <option value="08:30 AM">08:30 AM</option>
+                <option value="09:00 AM">09:00 AM</option>
+                <option value="09:30 AM">09:30 AM</option>
+                <option value="10:00 AM">10:00 AM</option>
+                <option value="10:30 AM">10:30 AM</option>
+				<option value="11:00 AM">11:00 AM</option>
+                <option value="11:30 AM">11:30 AM</option>
+				<option value="12:00 PM">12:00 PM</option>
+                <option value="12:30 PM">12:30 PM</option>
+              </select>
           </div>
           <div class="input-field col s4">
             <input id="end_time" type="time" class="validate">
