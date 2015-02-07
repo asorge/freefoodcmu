@@ -5,10 +5,24 @@ $(function() {
 		Parse.FacebookUtils.init({
 		   appId      : '498020883669593', // Facebook App ID
 		   channelUrl : '//allysorge.com/freefoodcmu', // Channel File
-		   status     : true, // check login status
+		   status     : false, // check login status
 		   cookie     : true, // enable cookies to allow Parse to access the session
 		   xfbml      : true  // parse XFBML
 		});
+		
+		Parse.FacebookUtils.logIn(null, {
+		  success: function(user) {
+			if (!user.existed()) {
+			  alert("User signed up and logged in through Facebook!");
+			} else {
+			  alert("User logged in through Facebook!");
+			}
+		  },
+		  error: function(user, error) {
+			alert("User cancelled the Facebook login or did not fully authorize.");
+		  }
+		});
+		
 	};
 	
 	(function(d, debug){
@@ -19,18 +33,7 @@ $(function() {
 	 ref.parentNode.insertBefore(js, ref);
 	}(document, /*debug*/ false));
 	
-	Parse.FacebookUtils.logIn(null, {
-	  success: function(user) {
-		if (!user.existed()) {
-		  alert("User signed up and logged in through Facebook!");
-		} else {
-		  alert("User logged in through Facebook!");
-		}
-	  },
-	  error: function(user, error) {
-		alert("User cancelled the Facebook login or did not fully authorize.");
-	  }
-	});
+
 	
 	$(".newEvent .submit").on("click", function() {
 		var Event = Parse.Object.extend("Event");
