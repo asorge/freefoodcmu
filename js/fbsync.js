@@ -12,6 +12,8 @@ function submitForReview(groupName, message, posterName) {
 }
 
 function considerPost(groupName, message, posterName) {
+	if (!message)
+		return;
 	var lower = message.toLowerCase();
 	for (var i = 0; i < freeFoodStrings.length; i++) {
 		if (lower.indexOf(freeFoodStrings[i]) !== -1) {
