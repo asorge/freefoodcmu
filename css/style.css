@@ -32,9 +32,6 @@ html footer {
 div#search {
 	position: absolute;
 	display: inline-block;
-	width: 15%;
-	height: 5%;
-	right: 2%;
 	float: right;
 	padding-left: 2%;
 }
