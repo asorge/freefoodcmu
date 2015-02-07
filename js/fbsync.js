@@ -13,7 +13,11 @@ function submitForReview(groupName, message, posterName) {
 	var $form = $("#eventTemplate").clone();
 	$form.attr("visible", "yes");
 	$("#eventForms").append($form);
-	$form.find("#source").attr("value", message);
+	
+	var sourceMessage = posterName + " poster in " + groupName + ": \n" + message;
+	var $source = $form.find(".source");
+	$source.attr("value", sourceMessage);
+	var sourceLabel = $form.find('label[for="source"]').addClass("active");
 }
 
 function considerPost(groupName, message, posterName) {
