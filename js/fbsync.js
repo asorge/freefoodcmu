@@ -23,7 +23,7 @@ $(function() {
 		});
 		
 		$("#sync").on("click", function() {
-			FB.login(fbresponse, {scope: 'user_events,rsvp_events,read_stream,user_groups'});
+			FB.login(fbresponse, {scope: 'user_events,rsvp_event,read_stream,user_groups'});
 		});		
 
 	};
