@@ -1,5 +1,7 @@
 html {
 	body {
+
+
 		background: #ddd;
 
 		nav {
@@ -29,6 +31,10 @@ html {
 				width: 100%;
 				right: 1%;
 				font-size: 1vw;
+
+				a {
+					text-decoration: none;
+				}
 				
 
 				li#search {
@@ -140,9 +146,12 @@ html {
 
 div#calendar {
 	position: absolute;
-	width: 100%;
+	width: 60%;
 	top: 10%;
 	left: 20%;
+	height: 70%;
+	z-index: 100;
+	
 }
 
 

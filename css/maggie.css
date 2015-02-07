@@ -10,5 +10,5 @@ footer a:hover {
 
 /* styling links in top nav bar */
 #topright ul li a:hover{
-	text-decoration: underline;
+	text-decoration: none;
 }
