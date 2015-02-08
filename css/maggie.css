@@ -1,0 +1,21 @@
+html body nav a.title {
+	font-weight: bolder !important;
+}
+
+footer a:hover {
+	text-decoration: underline;
+	color: #f5f5f5;
+}
+
+/* styling links in top nav bar */
+#topright ul li a:hover{
+	text-decoration: none;
+}
+
+.eventform {
+	border: 2px solid black;
+	border-radius: 39px;
+	box-shadow: 0 0 3px 3px #b6b6b6;
+	margin-bottom: 5%;
+}
+

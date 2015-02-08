@@ -1,0 +1,239 @@
+  <html>
+    <head>
+    <title>free food @ cmu - add a new free food event</title>
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/style.css"/>
+      <link type="text/css" rel="stylesheet" href="css/maggie.css"/>
+      <link href='http://fonts.googleapis.com/css?family=Enriqueta:400,700' rel='stylesheet' type='text/css'>
+    </head>
+
+    <body>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/bin/materialize.min.js"></script>
+      <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.3.4.min.js"></script>
+      <script type="text/javascript" src="js/freefood.js"></script>
+
+	<div class="navbar-fixed">
+      <nav>
+	    <div class="nav-wrapper red darken-3">
+	    <div class = "col s12">
+	      <a href="index.html" class="brand-logo left title">free food @ cmu</a>
+          
+          <div id="topright">
+              <ul id="nav-mobile" class="side-nav">
+                <li id ="events"><a href="events.html">events</a></li>
+                <li id="cal"><a href="calendar.html">calendar</a></li>
+                <li id="ad"><a href="add.html">add</a></li>
+                <li id ="search">
+              		<form>
+                		<div class="input-field valign">
+                  		<input id="search" type="text" required>
+                  		<label for="search"><i class="mdi-action-search"></i></label>
+               		 </div>
+              		</form>
+          		</li>
+              </ul>
+          </div>
+          
+         
+          
+	    </div>
+	    </div>
+	  </nav>
+	 </div>
+     
+  <div class="row">
+
+  <div class = "col s6 offset-s3 center-align">
+      <div class="col s12"><br>Please enter the following information to add a free food event manually, or <br><br><a href="facebooksync.html" class="waves-effect waves-light btn blue darken-3 center-align">Sync with Facebook</a><br>
+
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="event_name" type="text">
+            <label for="event_name">Event Name</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="organization" type="text" class="validate">
+            <label for="organization">Organization</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="location" type="text" class="validate">
+            <label for="location">Location</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="food_type" type="text" class="validate">
+            <label for="food_type">Food Type</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="input-field col s4">
+            <input type="date" class="datepicker">
+            <label for="date" class="active">Date</label>
+          </div>
+          <div class="input-field col s4">
+             <label>Event Start Time</label><br>
+              <select id="starttime" class="browser-default">
+                <option value="" disabled selected>Choose Start Time</option>
+                <option value="12:00 AM">12:00 AM</option>
+                <option value="12:30 AM">12:30 AM</option>
+                <option value="01:00 AM">01:00 AM</option>
+                <option value="01:30 AM">01:30 AM</option>
+                <option value="02:00 AM">02:00 AM</option>
+                <option value="02:30 AM">02:30 AM</option>
+                <option value="03:00 AM">03:00 AM</option>
+                <option value="03:30 AM">03:30 AM</option>
+                <option value="04:00 AM">04:00 AM</option>
+                <option value="04:30 AM">04:30 AM</option>
+                <option value="05:00 AM">05:00 AM</option>
+                <option value="05:30 AM">05:30 AM</option>
+                <option value="06:00 AM">06:00 AM</option>
+                <option value="06:30 AM">06:30 AM</option>
+                <option value="07:00 AM">07:00 AM</option>
+                <option value="07:30 AM">07:30 AM</option>
+                <option value="08:00 AM">08:00 AM</option>
+                <option value="08:30 AM">08:30 AM</option>
+                <option value="09:00 AM">09:00 AM</option>
+                <option value="09:30 AM">09:30 AM</option>
+                <option value="10:00 AM">10:00 AM</option>
+                <option value="10:30 AM">10:30 AM</option>
+				<option value="11:00 AM">11:00 AM</option>
+                <option value="11:30 AM">11:30 AM</option>
+				<option value="12:00 PM">12:00 PM</option>
+                <option value="12:30 PM">12:30 PM</option>
+                <option value="01:00 PM">01:00 PM</option>
+                <option value="01:30 PM">01:30 PM</option>
+                <option value="02:00 PM">02:00 PM</option>
+                <option value="02:30 PM">02:30 PM</option>
+                <option value="03:00 PM">03:00 PM</option>
+                <option value="03:30 PM">03:30 PM</option>
+                <option value="04:00 PM">04:00 PM</option>
+                <option value="04:30 PM">04:30 PM</option>
+                <option value="05:00 PM">05:00 PM</option>
+                <option value="05:30 PM">05:30 PM</option>
+                <option value="06:00 PM">06:00 PM</option>
+                <option value="06:30 PM">06:30 PM</option>
+                <option value="07:00 PM">07:00 PM</option>
+                <option value="07:30 PM">07:30 PM</option>
+                <option value="08:00 PM">08:00 PM</option>
+                <option value="08:30 PM">08:30 PM</option>
+                <option value="09:00 PM">09:00 PM</option>
+                <option value="09:30 PM">09:30 PM</option>
+                <option value="10:00 PM">10:00 PM</option>
+                <option value="10:30 PM">10:30 PM</option>
+				<option value="11:00 PM">11:00 PM</option>
+                <option value="11:30 PM">11:30 PM</option>
+              </select>
+          </div>
+          <div class="input-field col s4">
+            <label>Event End Time</label><br>
+              <select id="endtime" class = "browser-default">
+                <option value="" disabled selected>Choose End Time</option>
+                <option value="12:00 AM">12:00 AM</option>
+                <option value="12:30 AM">12:30 AM</option>
+                <option value="01:00 AM">01:00 AM</option>
+                <option value="01:30 AM">01:30 AM</option>
+                <option value="02:00 AM">02:00 AM</option>
+                <option value="02:30 AM">02:30 AM</option>
+                <option value="03:00 AM">03:00 AM</option>
+                <option value="03:30 AM">03:30 AM</option>
+                <option value="04:00 AM">04:00 AM</option>
+                <option value="04:30 AM">04:30 AM</option>
+                <option value="05:00 AM">05:00 AM</option>
+                <option value="05:30 AM">05:30 AM</option>
+                <option value="06:00 AM">06:00 AM</option>
+                <option value="06:30 AM">06:30 AM</option>
+                <option value="07:00 AM">07:00 AM</option>
+                <option value="07:30 AM">07:30 AM</option>
+                <option value="08:00 AM">08:00 AM</option>
+                <option value="08:30 AM">08:30 AM</option>
+                <option value="09:00 AM">09:00 AM</option>
+                <option value="09:30 AM">09:30 AM</option>
+                <option value="10:00 AM">10:00 AM</option>
+                <option value="10:30 AM">10:30 AM</option>
+				<option value="11:00 AM">11:00 AM</option>
+                <option value="11:30 AM">11:30 AM</option>
+				<option value="12:00 PM">12:00 PM</option>
+                <option value="12:30 PM">12:30 PM</option>
+                <option value="01:00 PM">01:00 PM</option>
+                <option value="01:30 PM">01:30 PM</option>
+                <option value="02:00 PM">02:00 PM</option>
+                <option value="02:30 PM">02:30 PM</option>
+                <option value="03:00 PM">03:00 PM</option>
+                <option value="03:30 PM">03:30 PM</option>
+                <option value="04:00 PM">04:00 PM</option>
+                <option value="04:30 PM">04:30 PM</option>
+                <option value="05:00 PM">05:00 PM</option>
+                <option value="05:30 PM">05:30 PM</option>
+                <option value="06:00 PM">06:00 PM</option>
+                <option value="06:30 PM">06:30 PM</option>
+                <option value="07:00 PM">07:00 PM</option>
+                <option value="07:30 PM">07:30 PM</option>
+                <option value="08:00 PM">08:00 PM</option>
+                <option value="08:30 PM">08:30 PM</option>
+                <option value="09:00 PM">09:00 PM</option>
+                <option value="09:30 PM">09:30 PM</option>
+                <option value="10:00 PM">10:00 PM</option>
+                <option value="10:30 PM">10:30 PM</option>
+				<option value="11:00 PM">11:00 PM</option>
+                <option value="11:30 PM">11:30 PM</option>
+              </select>
+          </div>
+        </div>
+        <div class="row">
+        <div class="input-field col s12">
+            <textarea class="materialize-textarea"></textarea>
+            <label>Comments</label>
+        </div>
+      </div>
+      
+        <br>
+        <br>
+          
+        <button class="btn waves-effect waves-light red darken-3 reset" type="reset" name="action">Reset
+        	<i class="mdi-content-clear right"></i>
+        </button> 
+        
+        <button class="btn waves-effect waves-light red darken-3 submit">Submit
+            <i class="mdi-content-send right"></i>
+        </button>
+     
+        </div>
+        </div>
+  </div>
+  
+			</div>
+		</div>
+	 </div>
+
+
+
+    </body>
+
+<div id ="pictures">
+
+  <ul class = "left side-nav">
+   <li id ="pizza"><img src="css/pizza.svg"></li>
+   <li id ="soda"><img src="css/soda.svg"></li>
+   <li id="burrito"><img src="css/burrito.svg"</li>
+   <li id="cookie"><img src="css/cookie.svg"</li>
+ </ul>
+
+</div>
+</body>
+
+
+<footer class="page-footer red darken-3">
+  <div id = "footerText" class="footer-copyright">
+
+     free food @ cmu: A <a href="http://tartanhacks.com/">TartanHacks 2015</a> project by Ally Sorge, Chris Barker, and Maggie Yu.
+
+</div>
+</footer>
+
+</html>

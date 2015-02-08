@@ -1,3 +1,137 @@
-
+html body {
+  background: #ddd; }
+  html body select {
+    background: #ddd;
+    border: none; }
+  html body div#loggedin {
+    font-size: 2vw; }
+  html body .title {
+    font-family: 'Enriqueta', serif;
+    font-weight: bold;
+    color: transparent;
+    background: url("plaid.png");
+    -webkit-background-clip: text;
+    font-size: 4vw;
+    padding-left: 1%;
+    -webkit-text-stroke: 1px #fff;
+    text-align: center;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0; }
+  html body p#textOne {
+    font-family: 'Enriqueta', serif;
+    font-size: 3vw;
+    color: #aaa;
+    -webkit-text-stroke: 1px #000;
+    position: relative;
+    max-width: 50%;
+    text-align: center;
+    left: 50%; }
+  html body p#textTwo {
+    font-family: 'Enriqueta', serif;
+    -webkit-text-stroke: 1px #000;
+    font-size: 3vw;
+    position: relative;
+    max-width: 55%;
+    text-align: center;
+    left: 45%; }
+  html body nav {
+    position: absolute;
+    top: 0%;
+    max-height: 10%; }
+    html body nav ul#nav-mobile {
+      display: inline-block;
+      position: absolute;
+      width: 100%;
+      right: 1%;
+      font-size: 1vw; }
+      html body nav ul#nav-mobile a {
+        text-decoration: none; }
+      html body nav ul#nav-mobile li#search {
+        position: absolute;
+        right: 0;
+        width: 10%;
+        padding-top: -5%; }
+        html body nav ul#nav-mobile li#search i {
+          position: absolute;
+          margin-top: -15px; }
+      html body nav ul#nav-mobile li#ad {
+        position: absolute;
+        right: 10%;
+        width: 4%; }
+      html body nav ul#nav-mobile li#cal {
+        position: absolute;
+        right: 15%;
+        width: 5%; }
+      html body nav ul#nav-mobile li#events {
+        position: absolute;
+        right: 20%;
+        width: 5%; }
+  html body div#facebook a#facebooklogin {
+    position: absolute;
+    max-width: 100%;
+    right: 17%; }
+  html body div#pictures ul {
+    display: inline;
+    position: fixed;
+    width: 100%;
+    bottom: 15%; }
+    html body div#pictures ul li {
+      position: absolute;
+      width: 12%;
+      height: 20%;
+      z-index: 10000; }
+    html body div#pictures ul li#pizza {
+      position: absolute;
+      left: 0;
+      bottom: 1; }
+    html body div#pictures ul li#soda {
+      bottom: 0;
+      left: 7%; }
+    html body div#pictures ul li#burrito {
+      bottom: 1%;
+      left: 15%; }
+    html body div#pictures ul li#cookie {
+      bottom: 0;
+      left: 24%; }
+  html body div#centerContent {
+    position: absolute;
+    top: 4%;
+    width: 100%;
+    left: -5%; }
+    html body div#centerContent a.buttonWidth {
+      position: absolute;
+      max-width: 100%; }
+  html body div#calendar {
+    position: absolute;
+    width: 60%;
+    top: 10%;
+    left: 20%;
+    height: 70%;
+    z-index: -100; }
+html ul#eventList {
+  position: relative;
+  padding-top: 5%;
+  width: 100%;
+  margin-bottom: 10%;
+  z-index: -10; }
+  html ul#eventList li {
+    margin-top: 4%;
+    padding: 1%; }
+html footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: -10;
+  right: 0; }
+  html footer a {
+    color: #eee;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold; }
+  html footer div#footerText {
+    float: right;
+    background: none;
+    margin-right: 2%; }
 
 /*# sourceMappingURL=style.css.map */
