@@ -51,16 +51,16 @@ function submitEvent($form) {
 		error: function(model, error) {
 			console.log("Failed to save event");
 			console.log(model);
-			console.log(error);	
+			console.log(error);
 		}});
 }
 
 function submitForReview(groupName, message, posterName) {
-	
+
 	var $form = $("#eventTemplate").first().clone();
 	$form.attr("visible", "yes");
 	$("#eventForms").append($form);
-	
+
 	var sourceMessage = posterName + " poster in " + groupName + ": \n" + message;
 	var $source = $form.find(".source");
 	$source.text(sourceMessage);
@@ -120,9 +120,9 @@ function searchGroups(groups) {
 
 
 function fbsync() {
-	FB.api('/me/groups', function(response) { 
+	FB.api('/me/groups', function(response) {
 		var groups = [];
-		$.each(response.data, function(idx, group) { 
+		$.each(response.data, function(idx, group) {
 			groups.push({id: group.id, name: group.name});
 		});
 		searchGroups(groups);
@@ -155,10 +155,10 @@ $(function() {
 		   xfbml      : true, // parse XFBML
 		   version    : 'v2.2'
 		});
-		
+
 		$("#sync").on("click", function() {
-			FB.login(fbresponse, {scope: 'user_events,rsvp_event,read_stream,user_groups'});
-		});		
+			FB.login(fbresponse, {scope: 'user_groups'});
+		});
 
 	};
 
